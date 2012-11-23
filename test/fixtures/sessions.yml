@@ -1,0 +1,9 @@
+one:
+  id: MyString
+  user_id: 1
+  expires_at: 2012-11-22 15:48:27
+
+two:
+  id: MyString
+  user_id: 1
+  expires_at: 2012-11-22 15:48:27

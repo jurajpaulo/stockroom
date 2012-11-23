@@ -1,0 +1,27 @@
+<% title "Stock" %>
+
+<p>
+	<strong>Name:</strong>
+	<%= @stock.name %>
+</p>
+<p>
+	<strong>Description:</strong>
+	<%= @stock.description %>
+</p>
+<p>
+	<strong>Type:</strong>
+	<%= @stock.kind %>
+</p>
+<p>
+	<strong>Count:</strong>
+	<%= @stock.count %>
+</p>
+<p>
+	<strong>Critical Level:</strong>
+	<%= @stock.critical_level %>
+</p>
+
+<p>
+	<%= link_to "Edit", edit_stock_path(@stock) %> |
+	<%= link_to "View All", stocks_path %>
+</p>

@@ -1,0 +1,12 @@
+<%= form_for stock_change do |f| %>
+	<% if flash[:error_stock_id] == stock_id %>
+		<%= error_messages flash[:stock_change_errors] %>
+	<% end %>
+	
+	<%= f.hidden_field :stock_id, :value => stock_id %>
+
+    <%= f.label :count_change, '(+/-)' %>:
+    <%= f.text_field :count_change, :size => 5 %>
+
+	<%= f.submit 'Enter/Remove'%>
+<% end %>

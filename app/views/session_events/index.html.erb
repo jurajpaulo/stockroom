@@ -1,0 +1,16 @@
+<% title "Session Events" %>
+
+<table>
+	<tr>
+		<th><%= sortable 'users.name', 'user' %></th>
+		<th><%= sortable 'event' %></th>
+		<th><%= sortable 'session_events.created_at', 'time' %></th>
+	</tr>
+	<% for session_event in @session_events %>
+	<tr>
+		<td><%= session_event.user.email %></td>
+		<td><%= session_event.readable_event %></td>
+		<td><%= session_event.created_at %></td>
+	</tr>
+	<% end %>
+</table>

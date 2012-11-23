@@ -1,0 +1,18 @@
+<% title "Stock Changes" %>
+
+<table>
+	<tr>
+		<th><%= sortable 'stocks.name', 'Stock' %></th>
+		<th><%= sortable 'users.email', 'Username' %></th>
+		<th><%= sortable 'user_id' %></th>
+		<th><%= sortable 'stock_changes.created_at', 'Time' %></th>
+	</tr>
+	<% for stock_change in @stock_changes %>
+	<tr>
+		<td><%= stock_change.stock.name %></td>
+		<td><%= stock_change.user.email %></td>
+		<td><%= stock_change.count_change %></td>
+		<td><%= stock_change.created_at %></td>
+	</tr>
+	<% end %>
+</table>
