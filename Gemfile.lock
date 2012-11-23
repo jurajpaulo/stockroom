@@ -88,4 +88,5 @@ DEPENDENCIES
   nifty-generators
   pg
   rails (= 3.0.7)
+  rake (!= 0.9.0)
   thin
