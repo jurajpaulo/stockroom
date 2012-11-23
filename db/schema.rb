@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123230348) do
+ActiveRecord::Schema.define(:version => 20121123230349) do
 
   create_table "session_events", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20121123230348) do
 
   create_table "stocks", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.integer  "kind"
     t.integer  "count",          :default => 0
     t.integer  "critical_level", :default => 0

@@ -6,13 +6,13 @@
 		<th>Description</th>
 		<th><%= sortable 'kind', 'Type' %></th>
 		<th><%= sortable 'count' %></th>
-		<th>Critical Level</th>
+		<th>Critical</th>
 		<th>Change</th>
 	</tr>
 	<% for stock in @stocks %>
 	<tr>
 		<td><%= link_to stock.name, stock_path(stock) %></td>
-		<td><%= stock.description %></td>
+		<td width="50%"><%= stock.description %></td>
 		<td><%= stock.readable_kind %></td>
 		<td><%= stock.count %></td>
 		<td><%= stock.critical_level %></td>
