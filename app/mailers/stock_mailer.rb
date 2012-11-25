@@ -1,5 +1,5 @@
 class StockMailer < ActionMailer::Base
-  default :from => Frec::Application.config.action_mailer_default_from
+  default :from => Stockroom::Application.config.action_mailer_default_from
 
   def critical_stock_level_reached(stock)
       @stock = stock
