@@ -3,6 +3,18 @@ Stockroom::Application.configure do
   config.critical_level_email = 'salanalana@gmail.com'
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer_default_from = '"Stockroom" <stockroom@yahoo.com>'
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'gmail.com',
+    :user_name            => 'stockroomwatch@gmail.com',
+    :password             => 'stockheslo',
+    :authentication       => :login,
+    :enable_starttls_auto => true
+  }
+  config.action_mailer.raise_delivery_errors = true
   
   # In the development environment your application's code is reloaded on
   # every request.  This slows down response time but is perfect for development

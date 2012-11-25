@@ -1,9 +1,21 @@
 Stockroom::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.critical_level_email = 'stockroomwatch@gmail.com' #heslo: stockheslo
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'stockroom.herokuapp.com' }
   config.action_mailer_default_from = '"Stockroom" <stockroom@yahoo.com>'
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'gmail.com',
+    :user_name            => 'stockroomwatch@gmail.com',
+    :password             => 'stockheslo',
+    :authentication       => :login,
+    :enable_starttls_auto => true
+  }
+  config.action_mailer.raise_delivery_errors = true
+  
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
