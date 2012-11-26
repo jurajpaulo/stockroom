@@ -12,3 +12,8 @@ td, th {
 .red {
 	color:red;
 }
+
+.field_with_errors input[type="text"], .field_with_errors input[type="password"] {
+  padding: 3px 2px;
+  border: 2px solid red;
+}

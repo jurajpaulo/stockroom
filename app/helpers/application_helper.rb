@@ -11,8 +11,9 @@ module ApplicationHelper
   end
 
   def error_messages errors
-    if errors.any?
+    if errors && errors.any?
   		  render :partial => 'application/error_message', :locals => {:errors => errors}
   	end
   end
 end
+

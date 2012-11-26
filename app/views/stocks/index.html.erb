@@ -16,7 +16,8 @@
 		<td><%= stock.readable_kind %></td>
 		<td><%= stock.count %></td>
 		<td><%= stock.critical_level %></td>
-		<td><%= render 'stock_changes/new', :stock_change => @stock_change, :stock_id => stock.id %></td>
+		<td><% error_stock_change = (flash[:error_stock_change] if flash[:error_stock_change] && flash[:error_stock_change].stock_id == stock.id) %>
+			<%= render 'stock_changes/new', :stock_change => error_stock_change || @stock_change, :stock_id => stock.id %></td>
 	</tr>
 	<% end %>
 </table>

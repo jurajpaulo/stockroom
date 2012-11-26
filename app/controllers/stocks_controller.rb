@@ -4,7 +4,7 @@ class StocksController < ApplicationController
   
   def index
     @stocks = Stock.order(sort_column + ' ' + sort_direction)
-    @stock_change = StockChange.new(:count_change => 1)
+    @stock_change = StockChange.new(:count_change => -1)
   end
   
   def new

@@ -15,7 +15,7 @@ class StockChangesController < ApplicationController
         redirect_to stocks_url
     else
         # since redirecting, using flash to keep error messages
-        redirect_to stocks_url, :flash => {:stock_change_errors => @stock_change.errors, :error_stock_id => @stock_change.stock_id}
+        redirect_to stocks_url, :flash => {:error_stock_change => @stock_change}
     end
   end
 

@@ -8,8 +8,8 @@ class Stock < ActiveRecord::Base
   validates_length_of :name, :minimum => 3, :allow_nil => false, :allow_blank => false
   validates_uniqueness_of :name
   validates_presence_of :kind
-  validates_numericality_of :count, :greater_than_or_equal_to => 0
-  validates_numericality_of :critical_level, :greater_than_or_equal_to => 0
+  validates_numericality_of :count, :greater_than_or_equal_to => 0, :less_than => 2147483647
+  validates_numericality_of :critical_level, :greater_than_or_equal_to => 0, :less_than => 2147483647
 
   after_save :check_critical_level
   
