@@ -4,6 +4,8 @@
 	<% end %>
 	
 	<%= f.hidden_field :stock_id, :value => stock_id %>
+	<%= hidden_field_tag :sort, params[:sort] %>
+	<%= hidden_field_tag :direction, params[:direction] %>
 
     <%= f.label :count_change, '(+/-)' %>:
     <%= f.text_field :count_change, :size => 5 %>

@@ -2,9 +2,9 @@
 
 <table>
 	<tr>
-		<th><%= sortable 'users.name', 'user' %></th>
+		<th><%= sortable 'users.name', 'User' %></th>
 		<th><%= sortable 'event' %></th>
-		<th><%= sortable 'session_events.created_at', 'time' %></th>
+		<th><%= sortable 'session_events.created_at', 'Time' %></th>
 	</tr>
 	<% for session_event in @session_events %>
 	<tr>

@@ -4,7 +4,7 @@
 	<tr>
 		<th><%= sortable 'stocks.name', 'Stock' %></th>
 		<th><%= sortable 'users.email', 'Username' %></th>
-		<th><%= sortable 'user_id' %></th>
+		<th><%= sortable 'count_change', 'Change' %></th>
 		<th><%= sortable 'stock_changes.created_at', 'Time' %></th>
 	</tr>
 	<% for stock_change in @stock_changes %>
