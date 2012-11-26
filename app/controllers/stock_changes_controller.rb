@@ -23,7 +23,7 @@ class StockChangesController < ApplicationController
   
   #sets sorting column default and protects against sql injection
   def sort_column
-    session[:sort] = (StockChange.column_names + ['stocks.name', 'stock_changes.created_at']).include?(params[:sort]) ? params[:sort] : "id"
+    (StockChange.column_names + ['stocks.name', 'stock_changes.created_at']).include?(params[:sort]) ? params[:sort] : "id"
   end
   
 end

@@ -8,6 +8,6 @@ class SessionEventsController < ApplicationController
 
   #sets sorting column default and protects against sql injection
   def sort_column
-    session[:sort] = (SessionEvent.column_names + ['users.email', 'session_events.created_at']).include?(params[:sort]) ? params[:sort] : "id"
+    (SessionEvent.column_names + ['users.email', 'session_events.created_at']).include?(params[:sort]) ? params[:sort] : "id"
   end
 end
